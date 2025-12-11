@@ -1,4 +1,3 @@
-import React from 'react'
 import Header from './conpanents/Header'
 import Footer from './conpanents/Footer'
 import { Outlet } from 'react-router-dom'
