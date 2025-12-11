@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeBg from '../../public/image/montain.png'
+import HomeBg from '/image/montain.png'
 // home page ni qilish 
 export default function Home() {
     return (

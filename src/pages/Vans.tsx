@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { vans } from '../data/data.ts'
+import type { Van } from '../type/Types.ts';
 export default function Vans(){
-  const [filterVan , setFilterVan] = useState();
-  const handleFilter  = {type: 'Simple' | 'Regget' | 'Lucery'} =>{
-    
+  const [filterVan , setFilterVan] = useState<Van[]>(vans);
+  const handleFilter  = (type: 'Simple' | 'Rugged' | 'Luxury') : void =>{
+    setFilterVan(vans.filter((van) => van.type === type))
   }
   return (
   <div className="min-h-screen p-4 sm:p-6">
@@ -16,22 +17,22 @@ export default function Vans(){
       </div>
 
       <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
-        <button className="px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium transition-all bg-orange-100 text-gray-700 hover:bg-orange-200">
+        <button onClick={() => handleFilter("Simple")} className="px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium transition-all bg-orange-100 text-gray-700 hover:bg-orange-200">
           Simple
         </button>
-        <button className="px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium transition-all bg-orange-100 text-gray-700 hover:bg-orange-200">
+        <button onClick={() => handleFilter("Luxury")} className="px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium transition-all bg-orange-100 text-gray-700 hover:bg-orange-200">
           Luxury
         </button>
-        <button className="px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium transition-all bg-orange-100 text-gray-700 hover:bg-orange-200">
+        <button onClick={() => handleFilter("Rugged")} className="px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium transition-all bg-orange-100 text-gray-700 hover:bg-orange-200">
           Rugged
         </button>
-        <button className="px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium underline text-gray-700 hover:text-gray-900">
+        <button onClick={() => setFilterVan(vans)} className="px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium underline text-gray-700 hover:text-gray-900">
           Clear filters
         </button>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-        {vans.map(pro => {
-          return <div className="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow cursor-pointer">
+        {filterVan.map(pro => {
+          return <div key={pro.id} className={`bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow cursor-pointer`}>
             <div className="relative h-44 sm:h-52">
               <img
                 src={pro.imgUrl}
