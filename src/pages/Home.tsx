@@ -1,4 +1,3 @@
-import React from 'react'
 import HomeBg from '/image/montain.png'
 // home page ni qilish 
 export default function Home() {

@@ -1,4 +1,3 @@
-import React from 'react'
 import AboutImg from '/image/about-img.png'
 // Aobut page ni tugatish 
 export default function About() {
@@ -7,7 +6,7 @@ export default function About() {
             <div className="img ">
                 <img src={AboutImg} alt={AboutImg} />
             </div>
-            <div className="about-lable grow-1 px-4 py-6">
+            <div className="about-lable  px-4 py-6">
                 <h2 className='text-[#333] '>
                     Don’t squeeze in a sedan when you could relax in a van.
                 </h2>

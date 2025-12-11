@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { vans } from '../data/data.ts'
 import type { Van } from '../type/Types.ts';
 export default function Vans(){
