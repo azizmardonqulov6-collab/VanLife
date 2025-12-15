@@ -1,6 +1,7 @@
 import  { useState } from 'react';
 import { vans } from '../data/data.ts'
 import type { Van } from '../type/Types.ts';
+import Bage from '../conpanents/Bage.tsx';
 export default function Vans(){
   const [filterVan , setFilterVan] = useState<Van[]>(vans);
   const handleFilter  = (type: 'Simple' | 'Rugged' | 'Luxury') : void =>{
@@ -17,13 +18,13 @@ export default function Vans(){
       </div>
 
       <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
-        <button onClick={() => handleFilter("Simple")} className="px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium transition-all bg-orange-100 text-gray-700 hover:bg-orange-200">
+        <button onClick={() => handleFilter("Simple")} className={`px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium transition-all bg-orange-100 text-gray-700  hover:bg-[#E17654] hover:text-white`}>
           Simple
         </button>
-        <button onClick={() => handleFilter("Luxury")} className="px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium transition-all bg-orange-100 text-gray-700 hover:bg-orange-200">
+        <button onClick={() => handleFilter("Luxury")} className={`px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium transition-all bg-orange-100 text-gray-700 hover:bg-[#222222] hover:text-white`}>
           Luxury
         </button>
-        <button onClick={() => handleFilter("Rugged")} className="px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium transition-all bg-orange-100 text-gray-700 hover:bg-orange-200">
+        <button onClick={() => handleFilter("Rugged")} className={`px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium transition-all bg-orange-100 text-gray-700 hover:bg-[#115E59] hover:text-white`}>
           Rugged
         </button>
         <button onClick={() => setFilterVan(vans)} className="px-4 sm:px-5 py-2 rounded-md text-sm sm:text-base font-medium underline text-gray-700 hover:text-gray-900">
@@ -48,9 +49,7 @@ export default function Vans(){
                   <p className="text-xs sm:text-sm text-gray-500">/day</p>
                 </div>
               </div>
-              <span className={`inline-block bg-orange-500 text-white px-3 py-1.5 rounded text-xs sm:text-sm font-semibold ${pro.type}`}>
-                {pro.type}
-              </span>
+                <Bage type={pro.type}/>
             </div>
           </div>
         })}   

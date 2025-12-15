@@ -27,9 +27,9 @@ h3{
     z-index: -1;
 }
 .about-info h2{
-    font-size: 25px;
+    font-size: 22px;
     line-height: normal;
-    font-weight: 500;
+    font-weight: 700;
 }
 .Simple{
     background-color: #E17654;
@@ -39,4 +39,8 @@ h3{
 } 
 .Rugged{
     background-color: #115E59;
+}
+.about-lable h2{
+    font-size: 28px;
+    line-height: normal;
 }

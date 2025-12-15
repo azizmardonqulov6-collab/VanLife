@@ -1,46 +1,53 @@
-import type {Van} from '../type/Types.ts'
+import type { Van } from '../type/Types.ts'
 
-export const vans :Van[] = [
+export const vans: Van[] = [
   {
     id: 1,
     name: "Modest Explorer",
     price: 60,
     type: "Simple",
-    imgUrl: "/image/cards/1.png"
+    imgUrl: "/image/cards/1.png",
+    dec: "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!"
   },
   {
     id: 2,
     name: "Beach Bum",
     price: 80,
     type: "Rugged",
-    imgUrl: "/image/cards/2.png"
+    imgUrl: "/image/cards/2.png",
+    dec: "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!"
   },
   {
     id: 3,
     name: "Reliable Red",
     price: 100,
     type: "Luxury",
-    imgUrl: "/image/cards/3.jpg"
+    imgUrl: "/image/cards/3.jpg",
+    dec: "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!"
   },
   {
     id: 4,
     name: "Dreamfinder",
     price: 65,
     type: "Simple",
-    imgUrl: "/image/cards/4.png"
+    imgUrl: "/image/cards/4.png",
+    dec: "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!"
   },
   {
     id: 5,
     name: "The Cruiser",
     price: 120,
     type: "Luxury",
-    imgUrl: "/image/cards/5.png"
+    imgUrl: "/image/cards/5.png",
+    dec: "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!"
   },
   {
     id: 6,
     name: "Green Wonder",
     price: 70,
     type: "Rugged",
-    imgUrl: "/image/cards/6.png"
+    imgUrl: "/image/cards/6.png",
+    dec: "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!"
   }
 ];
+export const Selected = [];
