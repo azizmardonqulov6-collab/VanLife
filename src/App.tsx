@@ -5,7 +5,7 @@ import About from "./pages/About"
 import Layout from "./Layout"
 import Login from "./pages/Login"
 import NotFound from "./pages/notFound"
-import Selected from "./pages/Selected"
+import SingleVan from "./pages/SingleVan"
 function App() {
 
   return <BrowserRouter>
@@ -15,7 +15,7 @@ function App() {
                   <Route path="about" element={<About />} />
                   <Route path="vans" element={<Vans />} />
                   <Route path="/login" element={<Login />} />
-                  <Route path="/van/:id" element={<Selected />}  />
+                  <Route path="/vans/:id" element={<SingleVan />}  />
                   <Route path="*" element={<NotFound />} />
               </Route>
           </Routes>

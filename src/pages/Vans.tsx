@@ -2,6 +2,7 @@ import  { useState } from 'react';
 import { vans } from '../data/data.ts'
 import type { Van } from '../type/Types.ts';
 import Bage from '../conpanents/Bage.tsx';
+import { Link } from 'react-router-dom';
 export default function Vans(){
   const [filterVan , setFilterVan] = useState<Van[]>(vans);
   const handleFilter  = (type: 'Simple' | 'Rugged' | 'Luxury') : void =>{
@@ -33,7 +34,7 @@ export default function Vans(){
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
         {filterVan.map(pro => {
-          return <div key={pro.id} className={`bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow cursor-pointer`}>
+          return <Link to={`${pro.id}`} key={pro.id} className={`bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow cursor-pointer block`}>
             <div className="relative h-44 sm:h-52">
               <img
                 src={pro.imgUrl}
@@ -51,7 +52,7 @@ export default function Vans(){
               </div>
                 <Bage type={pro.type}/>
             </div>
-          </div>
+          </Link>
         })}   
 
       </div>
